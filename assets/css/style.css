@@ -1,0 +1,30 @@
+body {
+    background-color: gray;
+}
+
+div h1 {
+    background-color: orange;
+    color:white;
+    padding: 10px;
+    text-align: center;
+}
+
+div p {
+    background-color: bisque;
+    color: green;
+    padding: 10px;
+    text-align: center;
+}
+
+div f {
+    background-color: green;
+    color: purple;
+    padding: 50px;
+    text-align: center;
+}
+
+div h2 {
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
