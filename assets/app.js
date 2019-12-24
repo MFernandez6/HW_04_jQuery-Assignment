@@ -1,3 +1,5 @@
+
+
 var yourScore = document.getElementById('yourScore');
 //var yourScore = getElementById(red, blue, yellow, green.onclick(math.sum));
 yourScore.innerHTML = 0; //
@@ -10,22 +12,22 @@ function addToScore(val) {
   yourScore.innerHTML = numberToAdd + currentScore;
 }
 
-var red = document.getElementById("red");
-//red.setAttribute("value", "5");
-console.log(red.value);
+var orange = document.getElementById("orange");
+//orange.setAttribute("value", "5");
+console.log(orange.value);
 
 var blue = document.getElementById("blue");
-//console.log(blue.value);
+console.log(blue.value);
 
-var yellow = document.getElementById("yellow");
-//console.log(yellow.value);
+var purple = document.getElementById("purple");
+console.log(purple.value);
 
 var green = document.getElementById("green");
-//console.log(green.value);
+console.log(green.value);
 
 // add an event listener to elements
-red.addEventListener('click', function() {
-  //this refers to red
+orange.addEventListener('click', function() {
+  //this refers to orange
   addToScore(this.value);
   checkPlayerScore();
 });
@@ -41,7 +43,7 @@ blue.addEventListener('click', function() {
   checkPlayerScore();
 });
 
-yellow.addEventListener('click', function() {
+purple.addEventListener('click', function() {
   // this refers to blue
   addToScore(this.value);
   checkPlayerScore();
@@ -52,7 +54,7 @@ green.addEventListener('click', function() {
   addToScore(this.value);
   checkPlayerScore();
 });
-//var sum = parseInt(red.value) + parseInt(blue.value) + parseInt(yelow.value) + parseInt(green.value);
+//var sum = parseInt(orange.value) + parseInt(blue.value) + parseInt(yelow.value) + parseInt(green.value);
 
 // console.log (sum);
 function getRandomValue (a, b){
