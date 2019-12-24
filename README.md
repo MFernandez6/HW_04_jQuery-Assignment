@@ -1,5 +1,4 @@
-# unit-4-game
-$InfinityStones_Collectors
+# InfinityStones_Collectors
 
 By clicking on an infinity stone you will add a specific amount of points to your total score.  \
 
