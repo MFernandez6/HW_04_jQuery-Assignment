@@ -44,13 +44,13 @@ blue.addEventListener('click', function() {
 });
 
 purple.addEventListener('click', function() {
-  // this refers to blue
+  // this refers to purple
   addToScore(this.value);
   checkPlayerScore();
 });
 
 green.addEventListener('click', function() {
-  // this refers to blue
+  // this refers to green
   addToScore(this.value);
   checkPlayerScore();
 });

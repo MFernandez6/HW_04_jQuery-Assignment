@@ -59,6 +59,13 @@ body {
     padding: 10px;
 }
 
+.winsLosses {
+    background-color: whitesmoke;
+    color: #781c2e;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+}
 .yourScore {
     background-color: whitesmoke;
     color: #781c2e;
