@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 <head>
-    <meta charset="utf-8">
-    <title>M.A. Fernandez's Crystal Collector!!</title>
-    
+    <meta charset="UTF-8">
+    <title>MIA TRANSIT SCHEDULER</title>
+
     <!-- Hello Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -14,37 +13,81 @@
     <!-- AJAX here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- Firebase Ref Here -->
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+	<!-- Moment JS Ref Here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
 </head>
 
 <body>
-    <div class="row, container">
-        <!-- Title and Rules bro -->
-        <h1 id="title">Crystals Collector Game!</h1>
-        <h2 class="col-sm-3 subTitle">The Rules</h2>
-        <p class="col-sm-7 rules">You will be given a random number at the start of the game.  There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.  You win the game by matching your total score to the ramdom number, you lose the game if your total score goes above the random number. <br> <br> The value of each crystal is hidden from you until you click on it.  Each time when the game starts, the game will change the values of each crystal.</p>
-        
-        <!-- Here's your Goal Bro -->
-        <h3 class="col-sm-3 targetScore">Target Score: 
+<div class="row, container">
+    <br>
+    <!-- Main Body Bro -->
+	<div class = "jumbotron"> <!--header with title and backgrnd pic?-->
+		<h1 class="text-center">MIA TRANSIT</h1>
+		<h2 class="text-center">Getting You to Your Destination</h2>
+	</div>
+
+	<br>
+
+	<div class="row">
+	<!-- table columns... -->
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<!--Table for the train schedule-->
+			<div class="panel panel-default">
+  				<!-- Default panel contents -->
+  				<h3>Arrival Times</h3>
+  			</div>
+
+  			<div><!-- Table -->
+  				<table class="table" id= "trainTable">
+  			  		<thead><!--column titles-->
+  			  			<tr>
+                            <th>Train Name</th>    
+                            <th>Destination</th>
+  			  				<th>Frequency(min)</th>
+  			  				<th>Next Arrival</th>
+  			  				<th>Minutes Away</th>
+  			  			</tr>
+  			  		</thead>
+
+					<tbody></tbody> <!--content goes here-->
+
+  				</table>
+			</div><!-- table end-->
+            <form>
+			
+                 <div class="form-group">
+                
+                    <!-- <label for="name">T</label> -->
+                    <input type="text" class="form-control"
+                    id="name" placeholder="Train Name">
+                    <br>
+                    <!-- <label for="dest">Destination</label> -->
+                    <input type="text" class="form-control"
+                    id="dest" placeholder="Destination" >
+                    <br>    
+                    <!-- <label for="firstTrain">First Train Time (24:00)</label> -->
+                    <input type="text" class="form-control" id="firstTime" placeholder="First Train Time(24:00)">
+                    <br>
+                    <!-- <label for="freq">Frequency (min)</label> -->
+                    <input type="text" class="form-control" id="freq" placeholder="Frequency (min)">
+                    <br>              
+                    <button class="btn btn-primary btn-lg" id="trainInfoBtn" type="submit">Submit</button>
+                                      
+                    </div><!--input end-->
+
+            </form>
             <br>
-            <span id='targetScore'>0</span>
-        </h3> 
-
-        <!-- Hit me, Dealer -->
-        <div class="buttons">
-            <button class="diamond" id="red" value="7">Red</button>
-            <button class="diamond" id="blue" value="3">Blue</button>
-            <button class="diamond" id="yellow" value="6">Yellow</button>
-            <button class="diamond" id="green" value="1">Green</button>
         </div>
-
-        <!-- Here's your Score Bro -->
-        <h3 class="col-sm-3 yourScore">Your Score:
-        <br>
-            <span id='yourScore'>0</span>
-        </h3> 
     </div>
-
-<!-- Hello JavaScript! -->
-<script src="app.js"></script>
+</div>
+    <!-- Hello JavaScript! -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="firebase.js"></script>
 </body>
+
 </html>
